@@ -6,7 +6,7 @@ Create React App (CRA) is a utility or tool that allows you to create a new Reac
 
 ### Command:
 ```
-    npx create-react-app foldername
+npx create-react-app foldername
 ```
 
 #### Breakdown of above command:
@@ -28,7 +28,7 @@ Vite is a tool that sets up a development environment for you.
 
 ### Command:
 ```
-    npm create vite@latest
+npm create vite@latest
 ```
 
 ### Additional step after executing above command:
@@ -39,10 +39,10 @@ Vite is a tool that sets up a development environment for you.
 ### Command
 After creating your React project with Vite using the steps above steps. It's time to install this node_modules folder that contains all the necessary libraries or packages that are important for your React project to function properly. 
 ```
-    npm install
+npm install
 ```
 
 ### Shortcut (i is a short form for install)
 ```
-    npm i
+npm i
 ```
