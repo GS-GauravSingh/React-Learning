@@ -26,7 +26,7 @@ Other key features include the ability to pause, abort, or reuse work as new upd
 
 
 ## Reconciliation
-Reconciliation is an differentiation algorithm that is used by React to differentiate between the two DOM's, the Browser's DOM and React DOM. So, that it can determing which parts in the Browser's DOM need to be changes. Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM".
+Reconciliation is an differentiation algorithm that is used by React to differentiate between the two DOM's, the Browser's DOM and React DOM. So, that it can determine which parts in the Browser's DOM need to be changed. Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM".
 
 "In short, The algorithm React uses to diff one tree with another to determine which parts need to be changed."
 
