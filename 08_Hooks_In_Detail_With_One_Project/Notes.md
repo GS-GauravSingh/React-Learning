@@ -193,6 +193,64 @@ function Counter({ initialValue = 0 }) {
 export default Counter;
 ```
 
-### "useState"
+### "useMemo"
+The useMemo hook in React is used for memoization. It is a performance optimization technique that helps to avoid expensive calculations on every render by memoizing the result (or storing the result in cache memory) of a computation and returning the memoized value when the inputs have not changed.
+
+#### Syntax of useMemo:
+```
+const memoizedValue = useMemo(function(){}, [dependencies]);
+```
+
+##### Here's a breakdown of the syntax:
+1. memoizedValue: This variable stores the memoized value returned by the useMemo hook. This value will be re-evaluated only if any of the dependencies change.
+
+2. useMemo(function(){}, [dependencies]): This is the useMemo hook itself. It takes two arguments:
+    * The first argument is a function that computes the memoized value.
+    * The second argument is an array of dependencies. If any of these dependencies change between renders, the memoized value will be re-computed. If the dependencies remain the same, React will return the cached value.
 
 
+### "useEffect"
+When the component is first rendered, "useEffect" runs immediately after the initial render (initial render refers to the first time a component is rendered and displayed in the browser.). The dependency array specifies the variables that useEffect should watch for changes. If any of these variables change value between renders, useEffect will run again. If the dependency array is empty, useEffect will only run after the initial render and won't re-run on subsequent renders.
+
+#### Syntax of useEffect:
+```
+useEffect(() => { // code }, [dependencies]);
+```
+
+#### Important Points:
+1. If no dependency array is passed to the useEffect hook, it will run after every render.
+```
+useEffect(() => {
+  // code
+});
+```
+
+2. If you pass an empty array ([]) as the dependency array to the useEffect hook, the effect will run only once after the initial render (The initial render refers to the first time a component is rendered and displayed in the browser.), similar to how it behaves with a dependency array containing constant values that never change.
+```
+useEffect(() => {
+  // code
+}, []);
+```
+
+3. If you pass values in the dependency array of the useEffect hook, the effect will run whenever any of those values change between renders.
+
+
+### "useRef"
+"useRef" is a reference hook and it is used to create a variable that stores a reference of any particular DOM element. This reference can be used to access and manipulate the referenced element.
+
+#### Syntax of useRef:
+```
+const myRef = useRef(initialValue);
+```
+
+##### Here's a breakdown of the syntax:
+1. useRef(initialValue): This is the hook call. It creates a mutable(Mutable refers to something that can be changed or modified after it's been created) ref object initialized with an optional initial value (initialValue). The ref object persists for the entire lifetime of the component.
+
+2. myRef.current: The .current property of the ref object holds the reference to the DOM element or value.
+
+3. <input ref={myRef} />: You attach the ref object (myRef) to a JSX element using the ref attribute. This allows you to access and manipulate the corresponding DOM element imperatively.
+
+### Additional Important Points:
+1. In React applications, you have access to the window object, just like in regular JavaScript because React code is ultimately compiled into HTML, CSS, and JavaScript, which are then executed within a web browser environment and in browsers we have access to window object.
+
+2. In Node JS environment, the code is executes in server-side (server-side rendering) and that's why we don't have access to the window object.
