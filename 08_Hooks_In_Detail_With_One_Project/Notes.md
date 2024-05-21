@@ -248,7 +248,7 @@ const myRef = useRef(initialValue);
 
 2. myRef.current: The .current property of the ref object holds the reference to the DOM element or value.
 
-3. <input ref={myRef} />: You attach the ref object (myRef) to a JSX element using the ref attribute. This allows you to access and manipulate the corresponding DOM element imperatively.
+3. ```<input ref={myRef} />``` : You attach the ref object (myRef) to a JSX element using the ref attribute. This allows you to access and manipulate the corresponding DOM element imperatively.
 
 ### Additional Important Points:
 1. In React applications, you have access to the window object, just like in regular JavaScript because React code is ultimately compiled into HTML, CSS, and JavaScript, which are then executed within a web browser environment and in browsers we have access to window object.
