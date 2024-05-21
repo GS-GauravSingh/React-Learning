@@ -28,7 +28,8 @@ function App() {
 
   // Calculating result
   const calculateResult = () => {
-    setConvertedAmount((amount * currencyInfo[convertTo]));
+    const result = (amount * currencyInfo[convertTo]).toFixed(2);
+    setConvertedAmount(result);
   }
 
 
