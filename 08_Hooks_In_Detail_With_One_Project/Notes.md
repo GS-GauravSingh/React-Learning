@@ -219,18 +219,18 @@ useEffect(() => { // code }, [dependencies]);
 
 #### Important Points:
 1. If no dependency array is passed to the useEffect hook, it will run after every render.
-```
-useEffect(() => {
-  // code
-});
-```
+    ```
+    useEffect(() => {
+    // code
+    });
+    ```
 
 2. If you pass an empty array ([]) as the dependency array to the useEffect hook, the effect will run only once after the initial render (The initial render refers to the first time a component is rendered and displayed in the browser.), similar to how it behaves with a dependency array containing constant values that never change.
-```
-useEffect(() => {
-  // code
-}, []);
-```
+    ```
+    useEffect(() => {
+    // code
+    }, []);
+    ```
 
 3. If you pass values in the dependency array of the useEffect hook, the effect will run whenever any of those values change between renders.
 
