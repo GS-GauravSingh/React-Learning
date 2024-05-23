@@ -29,21 +29,19 @@ npm install react-router-dom
 ### React Router Link Component
 The ```<Link>``` component is provided by React Router for navigation purposes. It's used to create clickable links within your application. Instead of traditional anchor tags (```<a>```), which would cause a full page reload, ```<Link>``` updates the URL and renders the appropriate component without reloading the entire page.
 
-The ```<Link>``` component in React Router is a self-closing tag. 
-
 To use ```<Link>```, you have import it form the `react-router-dom`, like this
 
 ```import { Link } from "react-router-dom";```
 
 #### Syntax of ```<Link>```:
 ```
-<Link to="/path" />
+<Link to="/path" /> Link Text </Link>
 ```
 
 Here's the breadown of above syntax:
 1. ```<Link>```: This is the component provided by React Router for creating navigation links.
-2. to="/path": "to" is an attribute that specifies the path that the link should navigate to when clicked.
-3. You would replace "/path" with the actual path you want the link to navigate to.
+2. `to`="/path": "to" is an attribute that specifies the path that the link should navigate to when clicked. You should replace "/path" with the actual path you want the link to navigate to.
+3. Link Text: This is the text or content that will be displayed as the clickable link.
 
 ### React Router NavLink Component
 The ```<NavLink>``` is a component in React Router that's used for creating navigation links in your application. It's similar to the regular ```<Link>``` component, but it adds extra features, like automatically applying styles to the link when it matches the current URL.
@@ -54,12 +52,13 @@ To use ```<NavLink>```, you have import it form the `react-router-dom`, like thi
 
 #### Syntax of ```<NavLink>```:
 ```
-<NavLink to="/path">Link Text</NavLink>
+<NavLink to="/path"> Link Text </NavLink>
 ```
 
 Here's a breakdown of the syntax:
 1. ```<NavLink>```: This is the component provided by React Router for creating navigation links.
-2. to="/path": This attribute specifies the path that the link should navigate to when clicked. It defines the URL destination.
+2. `to`="/path": This attribute specifies the path that the link should navigate to when clicked. It defines the URL destination. You should replace "/path" with the actual path you want the link to navigate to.
+
 3. Link Text: This is the text or content that will be displayed as the clickable link.
 
 #### Important Properties (Props)
