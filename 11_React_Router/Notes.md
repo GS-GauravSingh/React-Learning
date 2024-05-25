@@ -2,7 +2,7 @@
 In traditional websites built with HTML, CSS, and JavaScript, creating a multi-page website involves making separate HTML files for each page. For example: Each page of the website has its own HTML file (e.g., index.html for the home page, about.html for the about page, contact.html for the contact page, etc.).
 
 These pages are then linked together using anchor tags (```<a>```), allowing users to navigate through the site via a navigation menu. Like this:
-```
+```html
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -19,7 +19,7 @@ React is used to create Single-Page Applications (SPAs), which load a single HTM
 React Router is a popular library used with React (it's not a part of React; it's a separate library) to manage navigation within the application.  Instead of reloading the entire page, React Router updates the URL and dynamically renders the appropriate components without refreshing or reloading the page. 
 
 ### React Router Installation Steps
-```
+```javascript
 // first create a react project using create-react-app or vite
 // cd into your newly created react project
 // run the below command to install React Router
@@ -34,7 +34,7 @@ To use ```<Link>```, you have import it form the `react-router-dom`, like this
 ```import { Link } from "react-router-dom";```
 
 #### Syntax of ```<Link>```:
-```
+```javascript
 <Link to="/path" /> Link Text </Link>
 ```
 
@@ -51,7 +51,7 @@ To use ```<NavLink>```, you have import it form the `react-router-dom`, like thi
 ```import { NavLink } from "react-router-dom";```
 
 #### Syntax of ```<NavLink>```:
-```
+```javascript
 <NavLink to="/path"> Link Text </NavLink>
 ```
 
@@ -74,7 +74,7 @@ The `<NavLink>` components come with props (properties), these props can be used
         * `isActive`: This parameter is a function that returns true if the current URL matches the path specified in the to property of the NavLink, indicating that the link is currently active.
 
         * Example:
-            ```
+            ```javascript
             <NavLink to="/"
             style={ ({ isActive }) => {
             return isActive ? { color: "orange" } : {color: "gray"};

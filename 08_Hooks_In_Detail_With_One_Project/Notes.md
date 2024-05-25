@@ -13,7 +13,7 @@ There are two primary types of components in React:
 
     * Example of React Functional Component:
 
-    ```
+    ```javascript
     // Functional component named Greeting
     // Optional: It takes "props" as an argument, which is an object containing any properties passed to the component.
     function Greeting(props) {
@@ -41,7 +41,7 @@ There are two primary types of components in React:
     * And the class component must include "render()" method, which return HTML in the form of JSX, which describes the structure and content of the component's UI.
 
     * Example: Let's convert the above Functional Component into a Class Component:
-    ```
+    ```javascript
     // React is imported to enable the use of JSX syntax.
     // In React, when you're defining a class component, you typically import React and Component from the 'react' package. By importing Component from 'react', you're able to define your class components with all the features and capabilities provided by React.
     import React, { Component } from 'react';
@@ -66,7 +66,7 @@ In React, "state" is a ***JavaScript object*** that represents the current condi
 ***In other words, state are also called as dynamic variable because they hold data that may change over time.***
 
 Example: Creating my own state object:
-```
+```javascript
 import React, { Component } from 'react';
 
 // Class component named Greeting
@@ -132,7 +132,7 @@ It is the most commonly used React Hook. It allows functional components to have
 As we know React keeps track of state objects (in class components) or state variables (in functional components), so whenever React detects any state change in the state variable, it automatically calls the render() method, so that the component will be re-rendered and the changes will be reflected in UI.
 
 #### Syntax of useState:
-```
+```javascript
 const [state, setState] = useState(value);
 ```
 
@@ -145,7 +145,7 @@ const [state, setState] = useState(value);
 Task: Develop a basic React application featuring a counter with increment and decrement buttons.
 
 ##### Code:
-```
+```javascript
 import React, { useState } from "react";
 
 // Functional Component name Counter.
@@ -197,7 +197,7 @@ export default Counter;
 The useMemo hook in React is used for memoization. It is a performance optimization technique that helps to avoid expensive calculations on every render by memoizing the result (or storing the result in cache memory) of a computation and returning the memoized value when the inputs have not changed.
 
 #### Syntax of useMemo:
-```
+```javascript
 const memoizedValue = useMemo(function(){}, [dependencies]);
 ```
 
@@ -213,20 +213,20 @@ const memoizedValue = useMemo(function(){}, [dependencies]);
 When the component is first rendered, "useEffect" runs immediately after the initial render (initial render refers to the first time a component is rendered and displayed in the browser.). The dependency array specifies the variables that useEffect should watch for changes. If any of these variables change value between renders, useEffect will run again. If the dependency array is empty, useEffect will only run after the initial render and won't re-run on subsequent renders.
 
 #### Syntax of useEffect:
-```
+```javascript
 useEffect(() => { // code }, [dependencies]);
 ```
 
 #### Important Points:
 1. If no dependency array is passed to the useEffect hook, it will run after every render.
-    ```
+    ```javascript
     useEffect(() => {
     // code
     });
     ```
 
 2. If you pass an empty array ([]) as the dependency array to the useEffect hook, the effect will run only once after the initial render (The initial render refers to the first time a component is rendered and displayed in the browser.), similar to how it behaves with a dependency array containing constant values that never change.
-    ```
+    ```javascript
     useEffect(() => {
     // code
     }, []);
@@ -239,7 +239,7 @@ useEffect(() => { // code }, [dependencies]);
 "useRef" is a reference hook and it is used to create a variable that stores a reference of any particular DOM element. This reference can be used to access and manipulate the referenced element.
 
 #### Syntax of useRef:
-```
+```javascript
 const myRef = useRef(initialValue);
 ```
 
