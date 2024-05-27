@@ -1,0 +1,4 @@
+## What does Context API with Local Storage Mean ?
+When you use the Context API to store data in a React application, the data is stored in memory and is available to any components that consume the context. However, this data will be lost when the browser refreshes because the application state is reset.
+
+So, if you want this data to persist or if you don't want this data to be lost whenever the browser refreshes, then you need to store this data in a particular storage, and for this, you can use the browser's local storage. By doing this, you can retrieve the data from local storage when the application loads and save the data to local storage whenever it changes. This way, the application state is preserved even after a browser refresh.
